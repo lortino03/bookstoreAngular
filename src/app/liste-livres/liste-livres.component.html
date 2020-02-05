@@ -20,7 +20,7 @@
         <td>{{Livres.categorie}}</td>
         <td>{{Livres.etagere}}</td>
         <td ><button type="button" class="btn btn-outline-danger"(click)="SupprimerLivre(Livres.idLivre)">Supprimer</button>
-            <a type="button" href="http://localhost:4200/detail-livres" class="btn btn-outline-success" >Afficher</a>
+            <a type="button" href="{{'http://localhost:4200/detail-livres/'+ Livres.idLivre}}" class="btn btn-outline-success" >Afficher</a>
             <a type="button" href="http://localhost:4200/modif-livres" class="btn btn-outline-primary" >modifier</a></td>
         </tr>
     </tbody>

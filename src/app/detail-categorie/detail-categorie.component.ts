@@ -11,8 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailCategorieComponent implements OnInit {
   idCategorie: number;
   categorie: Categorie = new Categorie();
-  constructor(private CategorieService: CategorieService, private route: ActivatedRoute) { 
-    
+  constructor(private CategorieService: CategorieService, private route: ActivatedRoute) {   
     this.idCategorie=parseInt(this.route.snapshot.paramMap.get('idCategorie'))
   }
 

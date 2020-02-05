@@ -12,7 +12,9 @@ export class DetailEtagereComponent implements OnInit {
   idEtagere:number;
   etagere:Etagere=new Etagere();
 
-  constructor(private EtagereService:EtagereService,private route:ActivatedRoute) { }
+  constructor(private EtagereService:EtagereService,private route:ActivatedRoute) { 
+    this.idEtagere=parseInt(this.route.snapshot.paramMap.get('idEtagere'))
+  }
 
   ngOnInit() {
     this.EtagereService.getOne(this.idEtagere).subscribe(

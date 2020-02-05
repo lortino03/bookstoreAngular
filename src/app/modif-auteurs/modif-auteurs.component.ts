@@ -21,6 +21,7 @@ export class ModifAuteursComponent implements OnInit {
     this.AuteursService.getOne(this.idAuteurs).subscribe(
       data => {
         this.modifAuteur = data;
+        console.log(data);
       }
     );
   }

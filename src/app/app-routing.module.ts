@@ -62,7 +62,7 @@ const routes: Routes = [
   component:ListeEtagereComponent
 },
 {
-  path:"modif-livres/:id_livres",
+  path:"modif-livres/:idLivre",
   component:ModifLivresComponent
 },
 {
@@ -70,7 +70,7 @@ const routes: Routes = [
   component:ModifCategorieComponent
 },
 {
-  path:"modif-etagere/:id_etagere",
+  path:"modif-etagere/:idEtagere",
   component:ModifEtagereComponent
 },
 {
@@ -86,11 +86,11 @@ const routes: Routes = [
   component:DetailEtagereComponent
 },
 {
-  path:"detail-categorie/:id",
+  path:"detail-categorie/:idCategorie",
   component:DetailCategorieComponent
 },
 {
-  path:"detail-livres/:id",
+  path:"detail-livres/:idLivre",
   component:DetailLivresComponent
 },
 {

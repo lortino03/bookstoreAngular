@@ -11,7 +11,9 @@ import { ActivatedRoute } from '@angular/router';
 export class DetailLivresComponent implements OnInit {
   idLivre:number;
   livres:Livres=new Livres();
-  constructor(private LivresService:LivresService, private route:ActivatedRoute) { }
+  constructor(private LivresService:LivresService, private route:ActivatedRoute) {
+    this.idLivre=parseInt(this.route.snapshot.paramMap.get('idLivre'))
+   }
 
   ngOnInit() {
     this.LivresService.getOne(this.idLivre).subscribe(
