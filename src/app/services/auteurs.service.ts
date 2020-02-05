@@ -7,22 +7,22 @@ import { Auteurs } from '../models/Auteurs';
 })
 export class AuteursService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getAll(){
+  getAll() {
     return this.http.get<Auteurs[]>("http://localhost:8080/auteurs").pipe()
   }
-  getOne(id:number){
+  getOne(id: number) {
     return this.http.get<Auteurs>("http://localhost:8080/auteurs/" + id).pipe()
   }
 
   addnew(auteur: Auteurs) {
     return this.http.post("http://localhost:8080/auteurs", auteur).pipe()
-}
-updateOne(id:number, auteur:Auteurs){
-  return this.http.put ("http://localhost:8080/auteurs/"+id,auteur).pipe();
-}
-deleteOne(id:number){
-  return this.http.delete("http://localhost:8080/auteurs/"+id).pipe();
-}
+  }
+  updateOne(id: number, auteur: Auteurs) {
+    return this.http.put("http://localhost:8080/auteurs/" + id, auteur).pipe();
+  }
+  deleteOne(id: number) {
+    return this.http.delete("http://localhost:8080/auteurs/" + id).pipe();
+  }
 }

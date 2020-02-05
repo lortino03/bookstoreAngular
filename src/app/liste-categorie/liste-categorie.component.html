@@ -9,8 +9,8 @@
     <tbody>
         <tr *ngFor="let Categorie of listCategorie">
         <td align="center">{{Categorie.libelle}}</td>
-        <td align="center"><button type="button" class="btn btn-outline-danger"(click)="SupprimerCategorie(Categorie.id)">Supprimer</button>
-            <a type="button" href="http://localhost:4200/detail-categorie" class="btn btn-outline-success" >Afficher</a>
+        <td align="center"><button type="button" class="btn btn-outline-danger"(click)="SupprimerCategorie(Categorie.idCategorie)">Supprimer</button>
+            <a type="button" href="{{'http://localhost:4200/detail-categorie/'+Categorie.idCategorie}}" class="btn btn-outline-success" >Afficher</a>
             <a type="button" href="http://localhost:4200/modif-categorie" class="btn btn-outline-primary" >modifier</a></td>
         </tr>
     </tbody>

@@ -1,5 +1,5 @@
 export class Etagere{
-    id_etagere: number;
+    idEtagere: number;
     libelle: String;
     
 }

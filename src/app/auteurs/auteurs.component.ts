@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Auteurs } from '../models/Auteurs';
 import { AuteursService } from '../services/auteurs.service';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -20,8 +21,13 @@ newAuteurs:Auteurs=new Auteurs();
   ajouterAuteur(){
     console.log(this.newAuteurs)
     this.auteursService.addnew(this.newAuteurs).subscribe(
-      data=>{
-
+      data=>{Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Auteur ajouté avec succès',
+        showConfirmButton: false,
+        timer: 1500
+      })
       }
     );
   }

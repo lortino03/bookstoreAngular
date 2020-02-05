@@ -3,22 +3,15 @@
   <div class="form-group row">
     <label for="nom" class="col-sm-2 col-form-label">Nom</label>
     <div class="col-sm-10">
-      <input type="text"  name="nom"  [(ngModel)]="modifAuteur.nom" class="form-control" id="idnom">
+      <input type="text"  name="nom" [(ngModel)]="modifAuteur.nom" class="form-control" id="idnom">
     </div>
   </div>
   <div class="form-group row">
     <label for="prenom" class="col-sm-2 col-form-label">Prenom</label>
     <div class="col-sm-10">
-      <input type="text"  name="Prenom"  [(ngModel)]="modifAuteur.prenom"class="form-control" id="idprenom">
+      <input type="text"  name="prenom"  [(ngModel)]="modifAuteur.prenom"class="form-control" id="idprenom">
     </div>
   </div>
   <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="ModifierAuteur()">Soumettre</button>
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            Modification effecuée!
-                        </div>
-                    </div>
-                </div>
+           
 </form>

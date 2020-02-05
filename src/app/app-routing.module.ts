@@ -62,35 +62,35 @@ const routes: Routes = [
   component:ListeEtagereComponent
 },
 {
-  path:"modif-livres",
+  path:"modif-livres/:id_livres",
   component:ModifLivresComponent
 },
 {
-  path:"modif-categorie",
+  path:"modif-categorie/:idCategorie",
   component:ModifCategorieComponent
 },
 {
-  path:"modif-etagere",
+  path:"modif-etagere/:id_etagere",
   component:ModifEtagereComponent
 },
 {
-  path:"modif-auteurs",
+  path:"modif-auteurs/:id",
   component:ModifAuteursComponent
 },
 {
-  path:"detail-auteurs",
+  path:"detail-auteurs/:id",
   component:DetailAuteursComponent
 },
 {
-  path:"detail-etagere",
+  path:"detail-etagere/:idEtagere",
   component:DetailEtagereComponent
 },
 {
-  path:"detail-categorie",
+  path:"detail-categorie/:id",
   component:DetailCategorieComponent
 },
 {
-  path:"detail-livres",
+  path:"detail-livres/:id",
   component:DetailLivresComponent
 },
 {

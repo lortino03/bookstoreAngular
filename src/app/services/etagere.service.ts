@@ -21,7 +21,8 @@ export class EtagereService {
 updateOne(id:number, etagere:Etagere){
   return this.http.put ("http://localhost:8080/etagere/"+id,etagere).pipe();
 }
+
 deleteOne(id:number){
-  return this.http.delete("http://localhost:8080/etagere/"+id).pipe();
+  return this.http.delete('http://localhost:8080/etagere/'+id).pipe();
 }
 }

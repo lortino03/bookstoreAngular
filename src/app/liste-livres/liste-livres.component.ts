@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Livres } from '../models/Livres';
 import { LivresService } from '../services/livres.service';
 import { Route } from '@angular/compiler/src/core';
-import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-liste-livres',
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./liste-livres.component.css']
 })
 export class ListeLivresComponent implements OnInit {
-
+  idLivre:Livres;
   listLivres: Livres[]=[];
 
   constructor(private LivresService:LivresService) { }
@@ -22,11 +22,35 @@ export class ListeLivresComponent implements OnInit {
       }
     );
   }
-supprimerLivre(id:number){
-  this.LivresService.deleteOne(id).subscribe(
-    data=>{
-      this.ngOnInit()
+SupprimerLivre(id:number){
+  Swal.fire({
+    icon: 'error',
+    title: 'Desolé...',
+    text: 'Cet auteur ne peux etre supprimé!',
+    footer: '<a href>Why do I have this issue?</a>'
+  })
+  Swal.fire({
+    title: 'Etes vous sûr?',
+    text: "Vous ne pourrez pas revenir en arrière!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Oui, continuer!'
+  }).then((result) => {
+    if (result.value) {
+      this.LivresService.deleteOne(id).subscribe(
+        data => {
+          Swal.fire(
+            'Supprimé!',
+            'Le livre a été supprimé.',
+            'success'
+          )
+          this.ngOnInit();
+        }
+      );
+
     }
-  )
+  })
 }
 }

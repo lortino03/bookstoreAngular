@@ -3,6 +3,7 @@ import { Categorie } from '../models/Categorie';
 import { CategorieService } from '../services/categorie.service';
 import { Route } from '@angular/compiler/src/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-categorie',
@@ -20,9 +21,15 @@ export class CategorieComponent implements OnInit {
     console.log(this.newCategorie)
     this.CategorieService.addnew(this.newCategorie).subscribe(
       data => {
-
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Categorie ajoutée avec succès',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
-    )
+    );
 
   }
 }

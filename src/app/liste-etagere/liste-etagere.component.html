@@ -9,8 +9,8 @@
     <tbody>
         <tr *ngFor="let Etagere of listEtagere">
         <td align="center">{{Etagere.libelle}}</td>
-        <td align="center"><button type="button" class="btn btn-outline-danger"(click)="SupprimerEtagere(Etagere.id)">Supprimer</button>
-            <a type="button" href="http://localhost:4200/detail-etagere" class="btn btn-outline-success" >Afficher</a>
+        <td align="center"><button type="button" class="btn btn-outline-danger" (click)="SupprimerEtagere(Etagere.idEtagere)">Supprimer</button>
+            <a type="button" href="{{'http://localhost:4200/detail-etagere/'+Etagere.idEtagere}}" class="btn btn-outline-success" >Afficher</a>
             <a type="button" href="http://localhost:4200/modif-etagere" class="btn btn-outline-primary" >modifier</a></td>
         </tr>
     </tbody>

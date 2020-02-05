@@ -13,6 +13,7 @@ export class ModifAuteursComponent implements OnInit {
   idAuteurs: number;
   modifAuteur: Auteurs = new Auteurs();
   constructor(private AuteursService: AuteursService, private route: ActivatedRoute) {
+
     this.idAuteurs = parseInt(this.route.snapshot.paramMap.get('id_auteur'))
   }
 

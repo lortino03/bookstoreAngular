@@ -23,6 +23,6 @@ export class LivresService {
     return this.http.put("http://localhost:8080/livres/" + id, livre).pipe();
   }
   deleteOne(id:number){
-    return this.http.delete("http://localhost:8080/livres/"+id).pipe();
+    return this.http.delete("http://localhost:8080/livres/" +id).pipe();
   }
 }

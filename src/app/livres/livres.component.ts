@@ -16,45 +16,70 @@ import { EtagereService } from '../services/etagere.service';
   styleUrls: ['./livres.component.css']
 })
 export class LivresComponent implements OnInit {
-  newLivres: Livres=new Livres();
+  newLivres: Livres = new Livres();
+  Categorie: Categorie = new Categorie();
+  Auteur: Auteurs = new Auteurs();
+  Etagere: Etagere = new Etagere();
   idCategorie: number;
   idAuteur: number;
   idEtagere: number;
-  listCategorie: Categorie[]=[];
-  listAuteur: Auteurs[]=[];
-  listEtagere: Etagere[]=[];
+  listCategorie: Categorie[] = [];
+  listAuteur: Auteurs[] = [];
+  listEtagere: Etagere[] = [];
 
-  constructor(private LivresService:LivresService, private route:Router, private CategorieService:CategorieService,
+  constructor(private LivresService: LivresService, private route: Router, private CategorieService: CategorieService,
     private AuteursService: AuteursService, private EtagereService: EtagereService) { }
 
   ngOnInit() {
     this.CategorieService.getAll().subscribe(
-      data=>{
-        this.listCategorie=data;
+      data => {
+        this.listCategorie = data;
         console.log(data);
       }
     );
- this.AuteursService.getAll().subscribe(
-   data=>{
-     this.listAuteur=data;
-     console.log(data);
-   }
- );
- this.EtagereService.getAll().subscribe(
-   data=>{
-     this.listEtagere=data;
-     console.log(data);
-       }
- );
-  }
-
-  AjouterLivres(){
-    console.log(this.newLivres)
-    this.LivresService.addnew(this.newLivres).subscribe(
-      data=>{
-
+    this.AuteursService.getAll().subscribe(
+      data => {
+        this.listAuteur = data;
+        console.log(data);
       }
     );
+    this.EtagereService.getAll().subscribe(
+      data => {
+        this.listEtagere = data;
+        console.log(data);
+      }
+    );
+  }
+
+  AjouterLivres() {
+    console.log(this.newLivres)
+    this.AuteursService.getOne(this.idAuteur).subscribe(
+      data => {
+        this.Auteur = data;
+        console.log(this.Auteur)
+        this.newLivres.Auteurs=this.Auteur;
+        this.EtagereService.getOne(this.idEtagere).subscribe(
+          data=>{
+            this.Etagere=data;
+            console.log(this.Etagere)
+            this.newLivres.Etagere=this.Etagere
+            this.CategorieService.getOne(this.idCategorie).subscribe(
+              data=>{
+                this.Categorie=data;
+                console.log(this.Categorie)
+                this.newLivres.Categorie=this.Categorie
+                this.LivresService.addnew(this.newLivres).subscribe(
+                  data => {
+                    console.log(data)
+            
+                  }
+                );
+              }
+            )
+          }
+        )
+      }
+    )
 
   }
 }
