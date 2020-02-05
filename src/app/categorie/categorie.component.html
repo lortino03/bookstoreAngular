@@ -1,0 +1,18 @@
+<h2 align="center">Ajouter une Categorie de Livre</h2>
+<form>
+  <div class="form-group row">
+    <label for="nom" class="col-sm-2 col-form-label">Libelle</label>
+    <div class="col-sm-10">
+      <input type="text"  name="libelle"  [(ngModel)]="newCategorie.libelle" class="form-control" id="idlibelle">
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" (click)="ajouterCategorie()">Soumettre</button>
+                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            Nouvelle Categorie ajoutée!
+                        </div>
+                    </div>
+                </div>
+</form>
