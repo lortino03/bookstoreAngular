@@ -5,7 +5,7 @@ import { Etagere } from './Etagere';
 export class Livres{
     id_livre: number;
     code: number;
-    date: Date;
+    isbn: Date;
     titre: String;
     Auteurs:Auteurs;
     Categorie: Categorie;

@@ -7,14 +7,14 @@
                     <div class="form-group row">
                         <label for="code" class="col-sm-2 col-form-label">Code IBSN</label>
                         <div class="col-sm-10">
-                            <input type="text" name="code"[(ngModel)]="modifLivres.code" class="form-control"
+                            <input type="text" name="code"[(ngModel)]="modifLivres.isbn" class="form-control"
                                 id="idcode">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="date" class="col-sm-2 col-form-label">Date</label>
                         <div class="col-sm-10">
-                            <input type="date" name="date" [(ngModel)]="modifLivres.date" class="form-control"
+                            <input type="date" name="date" [(ngModel)]="modifLivres.dateDeParution" class="form-control"
                                 id="iddate">
                         </div>
                     </div>
@@ -28,16 +28,16 @@
                     <div class="form-group row">
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Auteurs</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="Auteurs" [(ngModel)]="idAuteur" id id="coul">
+                            <select class="form-control" name="Auteurs" [(ngModel)]="modifLivres.idAuteurs" id id="coul">
                                 <option *ngFor="let unAuteur of Auteurs"
-                                [(ngValue)]="uenAuteur.idAuteur">{{Auteurs.nom}}</option>
+                                [(ngValue)]="unAuteur.idAuteurs">{{Auteurs.nom}}</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Catégorie</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="Categorie" [(ngModel)]="idCategorie" id="idCategorie">
+                            <select class="form-control" name="Categorie" [(ngModel)]="modifLivres.Categorie.idCategorie" id="idCategorie">
                                 <option *ngFor="let uneCategorie of Categorie"
                                     [(ngValue)]="uneCategorie.idCategorie">{{Categorie.libelle}}</option>
                             </select>
@@ -47,7 +47,7 @@
                     <div class="form-group row">
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Etagere</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="Etagere" [(ngModel)]="modifLivre.idEtagere" id="idetagere">
+                            <select class="form-control" name="Etagere" [(ngModel)]="modifLivres.Etagere.idEtagere" id="idetagere">
                                 <option *ngFor="let uneEtagere of Etagere"
                                 [(ngValue)]="uneEtagere.idEtagere">{{Etagere.libelle}}</option>
                             </select>

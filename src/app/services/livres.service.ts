@@ -20,9 +20,13 @@ export class LivresService {
     return this.http.post("http://localhost:8080/livres", livre).pipe()
   }
   updateOne(id: number, livre: Livres) {
-    return this.http.put("http://localhost:8080/livres/" + id, livre).pipe();
+    return this.http.put("http://localhost:8080/livres/"+id, livre).pipe();
   }
   deleteOne(id:number){
     return this.http.delete("http://localhost:8080/livres/" +id).pipe();
+  }
+  
+  getByAuteurs(id: number) {
+    return this.http.get<Livres[]>("http://localhost:8080/livres/byauteur/"+id).pipe()
   }
 }

@@ -22,6 +22,9 @@ import { DetailLivresComponent } from './detail-livres/detail-livres.component';
 import { DetailCategorieComponent } from './detail-categorie/detail-categorie.component';
 import { DetailEtagereComponent } from './detail-etagere/detail-etagere.component';
 import { HomeComponent } from './home/home.component';
+import { LivresCategorieComponent } from './livres-categorie/livres-categorie.component';
+import { LivresAuteurComponent } from './livres-auteur/livres-auteur.component';
+import { LivresEtagereComponent } from './livres-etagere/livres-etagere.component';
 
 
 @NgModule({
@@ -44,7 +47,10 @@ import { HomeComponent } from './home/home.component';
     DetailLivresComponent,
     DetailCategorieComponent,
     DetailEtagereComponent,
-    HomeComponent
+    HomeComponent,
+    LivresCategorieComponent,
+    LivresAuteurComponent,
+    LivresEtagereComponent
     
   ],
 

@@ -18,6 +18,8 @@ import { DetailEtagereComponent } from './detail-etagere/detail-etagere.componen
 import { DetailCategorieComponent } from './detail-categorie/detail-categorie.component';
 import { DetailLivresComponent } from './detail-livres/detail-livres.component';
 import { HomeComponent } from './home/home.component';
+import { LivresCategorieComponent } from './livres-categorie/livres-categorie.component';
+import { LivresAuteurComponent } from './livres-auteur/livres-auteur.component';
 
 
 
@@ -95,6 +97,21 @@ const routes: Routes = [
 },
 {
   path:"home",
+  component:HomeComponent
+}
+,
+{
+  path:"livres-categorie",
+  component:LivresCategorieComponent
+}
+,
+{
+  path:"livres-auteur",
+  component:LivresAuteurComponent
+}
+,
+{
+  path:"livres-etagere",
   component:HomeComponent
 }
  

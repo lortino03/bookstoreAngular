@@ -22,12 +22,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let Livres of listLivres">
-        <td>{{Livres.code}}</td>
-        <td>{{Livres.date}}</td>
+        <td>{{Livres.isbn}}</td>
+        <td>{{Livres.dateDeParution}}</td>
         <td>{{Livres.titre}}</td>
-        <td>{{Livres.auteurs}}</td>
-        <td>{{Livres.categorie}}</td>
-        <td>{{Livres.etagere}}</td>
+        <td>{{Livres.auteur.nom}}</td>
+        <td>{{Livres.categorie.libelle}}</td>
+        <td>{{Livres.etagere.libelle}}</td>
         <td ><button type="button" class="btn btn-outline-danger"(click)="SupprimerLivre(Livres.idLivre)">Supprimer</button>
             <a type="button" href="{{'http://localhost:4200/detail-livres/'+ Livres.idLivre}}" class="btn btn-outline-success" >Consulter</a>
             <a type="button" href="{{'http://localhost:4200/modif-livres/'+Livres.idLivre }}" class="btn btn-outline-primary" >modifier</a></td>

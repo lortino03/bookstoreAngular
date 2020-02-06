@@ -73,15 +73,14 @@ export class LivresComponent implements OnInit {
                 this.LivresService.addnew(this.newLivres).subscribe(
                   data => {
                     console.log(data)
-            
                   }
                 );
               }
-            )
+            );
           }
-        )
+        );
       }
-    )
+    );
 
   }
 }
