@@ -28,7 +28,7 @@
                     <div class="form-group row">
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Auteurs</label>
                         <div class="col-sm-10">
-                            <select class="form-control" name="Auteurs" [(ngModel)]="idAuteur" id="idAuteur">
+                            <select class="form-control" name="Auteur" [(ngModel)]="idAuteur" id="idAuteur">
                                 <option *ngFor="let unAuteurs of listAuteur" [(ngValue)]="unAuteurs.idAuteur">
                                     {{unAuteurs.nom}}</option>
                             </select>
