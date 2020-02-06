@@ -17,9 +17,9 @@ import { EtagereService } from '../services/etagere.service';
 })
 export class LivresComponent implements OnInit {
   newLivres: Livres = new Livres();
-  Categorie: Categorie = new Categorie();
-  Auteur: Auteurs = new Auteurs();
-  Etagere: Etagere = new Etagere();
+  categorie: Categorie = new Categorie();
+  auteur: Auteurs = new Auteurs();
+  etagere: Etagere = new Etagere();
   idCategorie: number;
   idAuteur: number;
   idEtagere: number;
@@ -28,7 +28,9 @@ export class LivresComponent implements OnInit {
   listEtagere: Etagere[] = [];
 
   constructor(private LivresService: LivresService, private route: Router, private CategorieService: CategorieService,
-    private AuteursService: AuteursService, private EtagereService: EtagereService) { }
+    private AuteursService: AuteursService, private EtagereService: EtagereService) {
+    
+     }
 
   ngOnInit() {
     this.CategorieService.getAll().subscribe(
@@ -55,19 +57,19 @@ export class LivresComponent implements OnInit {
     console.log(this.newLivres)
     this.AuteursService.getOne(this.idAuteur).subscribe(
       data => {
-        this.Auteur = data;
-        console.log(this.Auteur)
-        this.newLivres.Auteurs=this.Auteur;
+        this.auteur = data;
+        console.log(this.auteur)
+        this.newLivres.Auteurs=this.auteur;
         this.EtagereService.getOne(this.idEtagere).subscribe(
           data=>{
-            this.Etagere=data;
-            console.log(this.Etagere)
-            this.newLivres.Etagere=this.Etagere
+            this.etagere=data;
+            console.log(this.etagere)
+            this.newLivres.Etagere=this.etagere
             this.CategorieService.getOne(this.idCategorie).subscribe(
               data=>{
-                this.Categorie=data;
-                console.log(this.Categorie)
-                this.newLivres.Categorie=this.Categorie
+                this.categorie=data;
+                console.log(this.categorie)
+                this.newLivres.Categorie=this.categorie
                 this.LivresService.addnew(this.newLivres).subscribe(
                   data => {
                     console.log(data)

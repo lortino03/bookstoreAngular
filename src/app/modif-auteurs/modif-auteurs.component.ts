@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Auteurs } from '../models/Auteurs';
 import { ActivatedRoute } from '@angular/router';
 import { AuteursService } from '../services/auteurs.service';
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -14,7 +15,7 @@ export class ModifAuteursComponent implements OnInit {
   modifAuteur: Auteurs = new Auteurs();
   constructor(private AuteursService: AuteursService, private route: ActivatedRoute) {
 
-    this.idAuteurs = parseInt(this.route.snapshot.paramMap.get('id_auteur'))
+    this.idAuteurs = parseInt(this.route.snapshot.paramMap.get('id'))
   }
 
   ngOnInit() {
@@ -29,6 +30,13 @@ export class ModifAuteursComponent implements OnInit {
     console.log(this.modifAuteur)
     this.AuteursService.updateOne(this.idAuteurs, this.modifAuteur).subscribe(
       data => {
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Auteur modifié avec succès',
+          showConfirmButton: false,
+          timer: 1500
+        })
       }
     );
   }

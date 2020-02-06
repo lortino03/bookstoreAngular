@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategorieService } from '../services/categorie.service';
 import { Categorie } from '../models/Categorie';
+import Swal from 'sweetalert2'
+
 
 @Component({
   selector: 'app-modif-categorie',
@@ -12,7 +14,7 @@ export class ModifCategorieComponent implements OnInit {
 idCategorie:number;
 modifCategorie: Categorie=new Categorie();
   constructor(private CategorieService:CategorieService, private route:ActivatedRoute) { 
-    this.idCategorie=parseInt(this.route.snapshot.paramMap.get('id_categorie'))
+    this.idCategorie=parseInt(this.route.snapshot.paramMap.get('idCategorie'))
   }
 
   ngOnInit() {
@@ -26,6 +28,14 @@ ModifierCategorie(){
   console.log(this.modifCategorie)
   this.CategorieService.updateOne(this.idCategorie,this.modifCategorie).subscribe(
     data=>{
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Categorie modifiée avec succès',
+        showConfirmButton: false,
+        timer: 1500
+      })
+      this.ngOnInit();
     }
   );
 }

@@ -29,7 +29,8 @@
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Auteurs</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="Auteurs" [(ngModel)]="idAuteur" id="idAuteur">
-                                <option *ngFor="let unAuteurs of listAuteur" [(ngValue)]="unAuteurs.idAuteur">{{unAuteurs.nom}}</option>
+                                <option *ngFor="let unAuteurs of listAuteur" [(ngValue)]="unAuteurs.idAuteur">
+                                    {{unAuteurs.nom}}</option>
                             </select>
                         </div>
                     </div>
@@ -37,7 +38,8 @@
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Catégorie</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="Categorie" [(ngModel)]="idCategorie" id="idCategorie">
-                                <option *ngFor="let uneCategorie of listCategorie"[(ngValue)]="uneCategorie.idCategorie">{{uneCategorie.libelle}}</option>
+                                <option *ngFor="let uneCategorie of listCategorie"
+                                    [(ngValue)]="uneCategorie.idCategorie">{{uneCategorie.libelle}}</option>
                             </select>
                         </div>
 
@@ -46,21 +48,15 @@
                         <label for="validationTooltip03" class="col-sm-2 col-form-label">Etagere</label>
                         <div class="col-sm-10">
                             <select class="form-control" name="Etagere" [(ngModel)]="idEtagere" id="idetagere">
-                                <option *ngFor="let uneEtagere of listEtagere" [(ngValue)]="uneEtagere.idEtagere">{{uneEtagere.libelle}}</option>
+                                <option *ngFor="let uneEtagere of listEtagere" [(ngValue)]="uneEtagere.idEtagere">
+                                    {{uneEtagere.libelle}}</option>
                             </select>
                         </div>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg"
                     (click)="AjouterLivres()">Soumettre</button>
-                <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-                    aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                    <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                            Livre ajouté!
-                        </div>
-                    </div>
-                </div>
+              
             </form>
         </form>
     </div>
