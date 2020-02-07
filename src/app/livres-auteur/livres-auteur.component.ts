@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class LivresAuteurComponent implements OnInit {
   idAuteur:number;
-  listLivres: Livres[]=[];
+  listLivresAuteur: Livres[]=[];
   constructor(private LivresService:LivresService, private route:ActivatedRoute ) { 
     this.idAuteur=parseInt(this.route.snapshot.paramMap.get('idAuteurs'))
   }
@@ -18,7 +18,7 @@ export class LivresAuteurComponent implements OnInit {
   ngOnInit() {
     this.LivresService.getByAuteurs(this.idAuteur).subscribe(
       data=>{
-        this.listLivres=data;
+        this.listLivresAuteur=data;   
       }
     );
   }

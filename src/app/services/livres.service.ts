@@ -29,4 +29,10 @@ export class LivresService {
   getByAuteurs(id: number) {
     return this.http.get<Livres[]>("http://localhost:8080/livres/byauteur/"+id).pipe()
   }
+  getByCategorie(id: number) {
+    return this.http.get<Livres[]>("http://localhost:8080/livres/byCategorie/"+id).pipe()
+  }
+  getByEtagere(id: number) {
+    return this.http.get<Livres[]>("http://localhost:8080/livres/byEtagere/"+id).pipe()
+  }
 }

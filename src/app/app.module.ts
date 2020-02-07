@@ -25,6 +25,15 @@ import { HomeComponent } from './home/home.component';
 import { LivresCategorieComponent } from './livres-categorie/livres-categorie.component';
 import { LivresAuteurComponent } from './livres-auteur/livres-auteur.component';
 import { LivresEtagereComponent } from './livres-etagere/livres-etagere.component';
+import { FooterComponent } from './footer/footer.component';
+import { ContactComponent } from './contact/contact.component';
+import { ListeLivresUtilisateursComponent } from './liste-livres-utilisateurs/liste-livres-utilisateurs.component';
+import { LivreParAuteurComponent } from './livre-par-auteur/livre-par-auteur.component';
+import { ListeAuteursUtilisateursComponent } from './liste-auteurs-utilisateurs/liste-auteurs-utilisateurs.component';
+import { ListeCategorieUtilisateursComponent } from './liste-categorie-utilisateurs/liste-categorie-utilisateurs.component';
+import { LivreParCategorieComponent } from './livre-par-categorie/livre-par-categorie.component';
+import { LivreParEtagereComponent } from './livre-par-etagere/livre-par-etagere.component';
+import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/liste-etagere-utilisateur.component';
 
 
 @NgModule({
@@ -50,7 +59,16 @@ import { LivresEtagereComponent } from './livres-etagere/livres-etagere.componen
     HomeComponent,
     LivresCategorieComponent,
     LivresAuteurComponent,
-    LivresEtagereComponent
+    LivresEtagereComponent,
+    FooterComponent,
+    ContactComponent,
+    ListeLivresUtilisateursComponent,
+    LivreParAuteurComponent,
+    ListeAuteursUtilisateursComponent,
+    ListeCategorieUtilisateursComponent,
+    LivreParCategorieComponent,
+    LivreParEtagereComponent,
+    ListeEtagereUtilisateurComponent
     
   ],
 

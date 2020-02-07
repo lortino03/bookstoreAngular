@@ -20,7 +20,15 @@ import { DetailLivresComponent } from './detail-livres/detail-livres.component';
 import { HomeComponent } from './home/home.component';
 import { LivresCategorieComponent } from './livres-categorie/livres-categorie.component';
 import { LivresAuteurComponent } from './livres-auteur/livres-auteur.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { LivresEtagereComponent } from './livres-etagere/livres-etagere.component';
+import { ContactComponent } from './contact/contact.component';
+import { ListeLivresUtilisateursComponent } from './liste-livres-utilisateurs/liste-livres-utilisateurs.component';
+import { ListeCategorieUtilisateursComponent } from './liste-categorie-utilisateurs/liste-categorie-utilisateurs.component';
+import { ListeAuteursUtilisateursComponent } from './liste-auteurs-utilisateurs/liste-auteurs-utilisateurs.component';
+import { ListeEtagereUtilisateursComponent } from './liste-etagere-utilisateurs/liste-etagere-utilisateurs.component';
+import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/liste-etagere-utilisateur.component';
+import { LivreParAuteurComponent } from './livre-par-auteur/livre-par-auteur.component';
 
 
 const routes: Routes = [
@@ -101,19 +109,52 @@ const routes: Routes = [
 }
 ,
 {
-  path:"livres-categorie",
+  path:"livres-categorie/:idCategorie",
   component:LivresCategorieComponent
 }
 ,
 {
-  path:"livres-auteur",
+  path:"livres-auteur/:idAuteurs",
   component:LivresAuteurComponent
 }
 ,
 {
-  path:"livres-etagere",
-  component:HomeComponent
+  path:"livres-etagere/:idEtagere",
+  component:LivresEtagereComponent
 }
+,
+{
+  path:"footer",
+  component:FooterComponent
+}
+,
+{
+  path:"contact",
+  component:ContactComponent
+},
+{
+  path:"liste-livres-utilisateurs",
+  component:ListeLivresUtilisateursComponent
+}
+,
+{
+  path:"liste-auteurs-utilisateurs",
+  component:ListeAuteursUtilisateursComponent
+}
+,
+{
+  path:"liste-categorie-utilisateurs",
+  component:ListeCategorieUtilisateursComponent
+},
+{
+  path:"liste-etagere-utilisateur",
+  component:ListeEtagereUtilisateurComponent
+},
+{
+  path:"livre-par-auteur",
+  component:LivreParAuteurComponent
+}
+ 
  
 ];
 
