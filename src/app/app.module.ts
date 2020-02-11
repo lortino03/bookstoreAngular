@@ -35,6 +35,16 @@ import { LivreParCategorieComponent } from './livre-par-categorie/livre-par-cate
 import { LivreParEtagereComponent } from './livre-par-etagere/livre-par-etagere.component';
 import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/liste-etagere-utilisateur.component';
 
+// module angular material 4 lignes
+import{BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import{MatTableModule} from '@angular/material/table';
+import{MatIconModule} from '@angular/material/icon';
+import{MatSortModule} from '@angular/material/sort';
+import { TestTutoComponent } from './test-tuto/test-tuto.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
+
+
 
 @NgModule({
   declarations: [
@@ -68,7 +78,10 @@ import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/li
     ListeCategorieUtilisateursComponent,
     LivreParCategorieComponent,
     LivreParEtagereComponent,
-    ListeEtagereUtilisateurComponent
+    ListeEtagereUtilisateurComponent,
+    TestTutoComponent,
+    ConnexionComponent,
+    UtilisateursComponent
     
   ],
 
@@ -77,7 +90,11 @@ import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/li
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatIconModule,
+    MatSortModule
 
   ],
   providers: [],

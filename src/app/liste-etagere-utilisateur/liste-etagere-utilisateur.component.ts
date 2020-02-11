@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Etagere } from '../models/Etagere';
 import { EtagereService } from '../services/etagere.service';
+declare var $:any;
 
 @Component({
   selector: 'app-liste-etagere-utilisateur',
@@ -20,6 +21,14 @@ export class ListeEtagereUtilisateurComponent implements OnInit {
         this.listEtagere = data;
       }
     );
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
   }
-
+  
 }

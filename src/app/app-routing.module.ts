@@ -26,9 +26,13 @@ import { ContactComponent } from './contact/contact.component';
 import { ListeLivresUtilisateursComponent } from './liste-livres-utilisateurs/liste-livres-utilisateurs.component';
 import { ListeCategorieUtilisateursComponent } from './liste-categorie-utilisateurs/liste-categorie-utilisateurs.component';
 import { ListeAuteursUtilisateursComponent } from './liste-auteurs-utilisateurs/liste-auteurs-utilisateurs.component';
-import { ListeEtagereUtilisateursComponent } from './liste-etagere-utilisateurs/liste-etagere-utilisateurs.component';
 import { ListeEtagereUtilisateurComponent } from './liste-etagere-utilisateur/liste-etagere-utilisateur.component';
 import { LivreParAuteurComponent } from './livre-par-auteur/livre-par-auteur.component';
+import { LivreParEtagereComponent } from './livre-par-etagere/livre-par-etagere.component';
+import { LivreParCategorieComponent } from './livre-par-categorie/livre-par-categorie.component';
+import { TestTutoComponent } from './test-tuto/test-tuto.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
 
 
 const routes: Routes = [
@@ -153,6 +157,29 @@ const routes: Routes = [
 {
   path:"livre-par-auteur",
   component:LivreParAuteurComponent
+},
+{
+path: "livre-par-etagere",
+component:LivreParEtagereComponent
+},
+{
+  path : "livre-par-categorie",
+  component:LivreParCategorieComponent
+}
+,
+{
+  path : "test-tuto",
+  component:TestTutoComponent
+}
+,
+{
+  path : "connexion",
+  component:ConnexionComponent
+}
+,
+{
+  path : "utilisateurs",
+  component:UtilisateursComponent
 }
  
  

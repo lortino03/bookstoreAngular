@@ -1,1 +1,16 @@
-<p>livre-par-etagere works!</p>
+<h2 align="center">Choisissez l'auteur dans la liste</h2>
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="validationTooltip03" class="col-sm-2 col-form-label">Noms</label>
+      <div class="col-sm-10">
+        <select class="form-control" name="Etagere" [(ngModel)]="idEtagere" id="idEtagere">
+          <option *ngFor="let Etagere of listEtagereLivre" [(ngValue)]="Etagere.idEtagere">{{Etagere.libelle}}
+          </option>
+        </select>  
+      </div>
+    </div>
+    <a type="button" href="{{'http://localhost:4200/livre-etagere/'+Etagere.idEtagere}}"
+      class="btn btn-outline-success">Consulter</a>
+  </form>
+</div>

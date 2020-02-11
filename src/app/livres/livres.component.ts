@@ -2,13 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Livres } from '../models/Livres';
 import { LivresService } from '../services/livres.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Categorie } from '../models/Categorie';
 import { Auteurs } from '../models/Auteurs';
 import { Etagere } from '../models/Etagere';
 import { CategorieService } from '../services/categorie.service';
 import { AuteursService } from '../services/auteurs.service';
 import { EtagereService } from '../services/etagere.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-livres',
@@ -27,8 +28,9 @@ export class LivresComponent implements OnInit {
   listAuteur: Auteurs[] = [];
   listEtagere: Etagere[] = [];
 
-  constructor(private LivresService: LivresService, private route: Router, private CategorieService: CategorieService,
+  constructor(private LivresService: LivresService, private route: ActivatedRoute, private CategorieService: CategorieService,
     private AuteursService: AuteursService, private EtagereService: EtagereService) {
+      this.idAuteur=parseInt(this.route.snapshot.paramMap.get('idAuteurs'))
 
      }
 
@@ -55,9 +57,9 @@ export class LivresComponent implements OnInit {
 
   AjouterLivres() {
     console.log(this.newLivres)
-    this.AuteursService.getOne(this.idAuteur).subscribe(
+    this.AuteursService.addnew(this.Auteur).subscribe(
       data => {
-        this.Auteur = data;
+        
         console.log(this.Auteur)
         this.newLivres.Auteurs=this.Auteur;
         this.EtagereService.getOne(this.idEtagere).subscribe(
@@ -73,6 +75,13 @@ export class LivresComponent implements OnInit {
                 this.LivresService.addnew(this.newLivres).subscribe(
                   data => {
                     console.log(data)
+                    Swal.fire({
+                      position: 'top-end',
+                      icon: 'success',
+                      title: 'Etagere ajoutée avec succès',
+                      showConfirmButton: false,
+                      timer: 1500
+                    })
                   }
                 );
               }

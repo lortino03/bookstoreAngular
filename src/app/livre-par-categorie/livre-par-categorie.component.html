@@ -1,1 +1,17 @@
-<p>livre-par-categorie works!</p>
+
+<h2 align="center">Choisissez la catégorie dans la liste</h2>
+<div class="container">
+  <form>
+    <div class="form-group row">
+      <label for="validationTooltip03" class="col-sm-2 col-form-label">Catégorie</label>
+      <div class="col-sm-10">
+        <select class="form-control" name="Categorie" [(ngModel)]="idCategorie" id="idCategorie">
+          <option *ngFor="let uneCategorie of listLivreCategorie" [(ngValue)]="uneCategorie.idCategorie">{{uneCategorie.libelle}}
+          </option>
+        </select>  
+      </div>
+    </div>
+    <a type="button" href="{{'http://localhost:4200/livre-categorie/'+Categorie.idCategorie}}"
+      class="btn btn-outline-success">Consulter</a>
+  </form>
+</div>

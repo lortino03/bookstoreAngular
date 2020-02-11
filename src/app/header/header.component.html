@@ -1,17 +1,19 @@
 <header>
-    
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #99ffee;">
-    <a class="navbar-brand" href="#">Logo</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-image:url(../../assets/library2.jpg);">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="http://localhost:4200/home">Accueil</a>
+          <a class="nav-link" href="http://localhost:4200/home" style="color:cornsilk">Accueil</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="color:cornsilk">
             Consulter
           </a>
           <!-- bloc menu déroulant -->
@@ -23,27 +25,48 @@
           </div>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="color:cornsilk">
+            Administrateur
+          </a>
+          <!-- bloc menu déroulant -->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="http://localhost:4200/liste-livres">Livres</a>
+            <a class="dropdown-item" href="http://localhost:4200/liste-auteurs">Auteurs</a>
+            <a class="dropdown-item" href="http://localhost:4200/liste-etagere">Etageres</a>
+            <a class="dropdown-item" href="http://localhost:4200/liste-categorie">Categorie</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="color:cornsilk">
             Recherche
           </a>
           <!-- bloc menu déroulant -->
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="http://localhost:4200/livre-par-auteur">Par Auteurs</a>
-            <a class="dropdown-item" href="http://localhost:4200/livres-par-etagere">Par Etagere</a>
-            <a class="dropdown-item" href="http://localhost:4200/livres-par-categorie">Par Categorie</a>
+            <a class="dropdown-item" href="http://localhost:4200/livre-par-etagere">Par Etagere</a>
+            <a class="dropdown-item" href="http://localhost:4200/livre-par-categorie">Par Categorie</a>
+            <a class="dropdown-item" href="http://localhost:4200/test-tuto">Tuto</a>
+            <a class="dropdown-item" href="http://localhost:4200/utilisateurs">Utilisateurs</a>
+
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="http://localhost:4200/contact">Contact</a>
+          <a class="nav-link" href="http://localhost:4200/contact" style="color:cornsilk">Contact</a><br>
+   
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
+      <form class="form-inline my-2 my-lg-5">
         <input class="form-control mr-sm-2" type="search" placeholder="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      </form>
+      <br>
+      <form class="form-inline my-2 my-lg-5">
+        <button class="btn btn-outline-success my-2 my-sm-0" >
+          <a class="dropdown-item" href="http://localhost:4200/connexion">Connexion</a></button>
+      </form>
     </div>
-</nav>
-  
-
+  </nav>
 </header>
-
+<br>

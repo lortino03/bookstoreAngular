@@ -4,29 +4,35 @@
 
 </head>
 
-<body>
-<h2 align="center">LISTE DES ETAGERES</h2>
-<div class="container" id="MonTableau">
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr align="center">
-            <th scope="col">Libéllés</th>
-            <th scope="col">Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let Etagere of listEtagere">
-        <td align="center">{{Etagere.libelle}}</td>
-        <td align="center">
-            <a type="button" href="{{'http://localhost:4200/detail-etagere/'+Etagere.idEtagere}}" class="btn btn-outline-success" >Consulter</a>
-            <a type="button" href="{{'http://localhost:4200/livres-etagere/'+Etagere.idEtagere}}" class="btn btn-outline-primary">Afficher les livres</a></td>
-        </tr>
-    </tbody>
-    <button type="button" class="btn btn-outline-info">
-        <a class="nav-link" href="http://localhost:4200/etagere">Ajouter une Etagere
-        </a></button>
-</table>
-</div>
+<body style="background-color: rgb(31, 219, 147);">
+    <h2 align="center">LISTE DES ETAGERES</h2>
+    <div class="container" id="MonTableau">
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr align="center">
+                    <th scope="col">Libéllés</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="myTable">
+                <tr *ngFor="let Etagere of listEtagere">
+                    <td align="center">{{Etagere.libelle}}</td>
+                    <td align="center">
+                        <a type="button" href="{{'http://localhost:4200/detail-etagere/'+Etagere.idEtagere}}"
+                            class="btn btn-outline-success">Consulter</a>
+                        <a type="button" href="{{'http://localhost:4200/livres-etagere/'+Etagere.idEtagere}}"
+                            class="btn btn-outline-primary">Afficher les livres</a></td>
+                </tr>
+            </tbody>
+            <button type="button" class="btn btn-outline-info">
+                <a class="nav-link" href="http://localhost:4200/etagere">Ajouter une Etagere
+                </a></button>
+        </table>
+    </div>
 </body>
-</html>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
+</html>

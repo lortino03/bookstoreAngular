@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Auteurs } from '../models/Auteurs';
 import { AuteursService } from '../services/auteurs.service';
 import Swal from 'sweetalert2'
+declare var $:any;
 
 @Component({
   selector: 'app-liste-auteurs-utilisateurs',
@@ -21,6 +22,14 @@ export class ListeAuteursUtilisateursComponent implements OnInit {
         this.listAuteurs = data;
       }
     );
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
   }
   supprimerAuteurs(id: number) {
     Swal.fire({

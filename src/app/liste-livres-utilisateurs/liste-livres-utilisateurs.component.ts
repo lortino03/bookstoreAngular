@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2'
 import { LivresService } from '../services/livres.service';
 import { Livres } from '../models/Livres';
+declare var $:any;
 
 @Component({
   selector: 'app-liste-livres-utilisateurs',
@@ -21,6 +22,15 @@ export class ListeLivresUtilisateursComponent implements OnInit {
         console.log(data);
       }
     );
+
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
   }
   SupprimerLivre(id: number) {
     this.LivresService.deleteOne(id).subscribe(
@@ -59,4 +69,6 @@ export class ListeLivresUtilisateursComponent implements OnInit {
       }
     )
   }
+
+
 }

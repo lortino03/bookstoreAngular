@@ -7,6 +7,10 @@
 <body>
     <h1 align="center">LISTE DES AUTEURS</h1>
     <div class="container"  id="MonTableau">
+        <h2>Filtre</h2>
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+        <input class="form-control" id="myInput" type="text" placeholder="Search..">
+        <br>
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr align="center">
@@ -15,7 +19,7 @@
                     <th scope="col">Actions</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="myTable">
                 <tr *ngFor="let Auteurs of listAuteurs">
                     <td>{{Auteurs.nom}}</td>
                     <td>{{Auteurs.prenom}}</td>

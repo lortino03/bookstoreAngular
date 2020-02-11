@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuteursService } from '../services/auteurs.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Livres } from '../models/Livres';
 import { LivresService } from '../services/livres.service';
 import { Auteurs } from '../models/Auteurs';
@@ -12,19 +12,27 @@ import { Auteurs } from '../models/Auteurs';
   styleUrls: ['./livre-par-auteur.component.css']
 })
 export class LivreParAuteurComponent implements OnInit {
+  Auteurs :Auteurs=new Auteurs();
   idAuteur: number;
   listAuteursLivres:Auteurs[]=[];
+  listDeLivres: Livres[]=[];
 
-  constructor(private AuteursService: AuteursService,private LivresService:LivresService,private route
-  : Router) {
+  constructor(private AuteursService: AuteursService,private LivresService: LivresService, private route
+  : ActivatedRoute) {this.idAuteur=parseInt(this.route.snapshot.paramMap.get("idAuteurs"))
+  
    }
   ngOnInit() { 
     this.AuteursService.getAll().subscribe(
       data=>{
         this.listAuteursLivres=data;
-        console.log(this.idAuteur)
+        console.log(data);
       }
-    );
+    );  
+    this.LivresService.getByAuteurs(this.idAuteur).subscribe(
+      data=>{
+        this.listDeLivres=data;
+      }
+    )
   }
 }
 

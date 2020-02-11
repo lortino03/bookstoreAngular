@@ -3,26 +3,28 @@
   <form>
     <div class="form-group row">
       <label for="validationTooltip03" class="col-sm-2 col-form-label">Noms</label>
-      <div class="col-sm-10">
-        <select class="form-control" name="Auteurs" [(ngModel)]="idAuteurs" id="idAuteur">
+      <thead>
+        <select class="form-control" name="idAuteurs" [(ngModel)]="idAuteurs" id="idAuteur" scope="col">
           <option *ngFor="let unAuteurs of listAuteursLivres" [(ngValue)]="unAuteurs.idAuteurs">{{unAuteurs.nom}}
           </option>
         </select>
-
-      </div>
+      </thead>
+      <tbody>
+        <a type="button" href="{{'http://localhost:4200/livre-auteur/'+Auteurs.idAuteurs}}"
+          class="btn btn-outline-success">Afficher</a>
+      </tbody>
     </div>
-    <a type="button" href="{{'http://localhost:4200/livre-auteur/'+Auteurs.idAuteur}}"
-      class="btn btn-outline-success">Consulter</a>
-
   </form>
 </div>
+
+
 
 <html>
 
 <head>
 </head>
 
-<body>
+<body style="background-color:rgb(255, 150, 112);">
   <h1 align="center">LISTE DES AUTEURS</h1>
   <div class="container" id="MonTableau">
     <table class="table table-bordered">
@@ -34,7 +36,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let Auteurs of listAuteurs">
+        <tr *ngFor="let Auteurs of listAuteursLivres">
           <td>{{Auteurs.nom}}</td>
           <td>{{Auteurs.prenom}}</td>
           <td align="center">
