@@ -1,5 +1,5 @@
 export class Utilisateurs{
-    login: String;
-    pwd:String;
+    login: any;
+    pwd:any;
 
 }

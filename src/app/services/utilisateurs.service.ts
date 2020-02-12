@@ -27,10 +27,14 @@ export class UtilisateursService {
     return this.http.delete("http://localhost:8080/utilisateurs/" +id).pipe();
   }
   getByLogin(utilisateurs: Utilisateurs) {
-    return this.http.post<boolean>("http://localhost:8080/utilisateurs/connexion",utilisateurs ).pipe()
+    return this.http.post<boolean>("http://localhost:8080/utilisateurs/connexbool",utilisateurs ).pipe()
   }
   getByLoginAndPwd(utilisateurs: Utilisateurs) {
     return this.http.post <Utilisateurs>("http://localhost:8080/utilisateurs/authentification",utilisateurs ).pipe()
   }
+  getByLoginToken(utilisateurs: Utilisateurs) {
+    return this.http.post<Utilisateurs>("http://localhost:8080/utilisateurs/token",utilisateurs ).pipe()
+  }
+
  
 }

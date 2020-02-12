@@ -11,6 +11,8 @@ import Swal from 'sweetalert2'
 })
 export class UtilisateursComponent implements OnInit {
   newUtilisateur: Utilisateurs = new Utilisateurs();
+  login:String;
+  pwd:String;
 
   constructor(private UtilisateursService: UtilisateursService, private route: Router) { }
 
