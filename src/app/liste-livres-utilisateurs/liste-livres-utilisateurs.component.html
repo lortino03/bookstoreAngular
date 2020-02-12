@@ -1,15 +1,15 @@
-<html>
+<html >
 
 <head>
 
 </head>
 
-<body style="background-color:rgb(255, 150, 112);">
+<body style="background-color: coral;">
 
     <h2 align="center">LISTE DES LIVRES</h2>
-    <div class="container" id="MonTableau" style="background-color:rgb(204, 86, 7);">
-        <h2>Filtre</h2>
-        <p>Type something in the input field to search the table for first names, last names or emails:</p>
+    <div class="container" id="MonTableau" style="background-color:wheat;">
+        <h2 align="center">Filtre</h2>
+        <p align="center"> Taper un mot dans la barre de recherche( nom, prenom, titre..)</p>
         <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <br>
         <table class="table table-bordered">
@@ -34,9 +34,9 @@
                     <td>{{Livres.etagere.libelle}}</td>
                     <td>
                         <a type="button" href="{{'http://localhost:4200/detail-livres/'+ Livres.idLivre}}"
-                            class="btn btn-outline-success">Consulter</a>
+                            class="btn btn-success">Consulter</a>
                         <a type="button" href="{{'http://localhost:4200/reserver-livres/'+Livres.idLivre }}"
-                            class="btn btn-outline-primary">Reserver</a></td>
+                            class="btn btn-primary">Reserver</a></td>
                 </tr>
             </tbody>
         </table>

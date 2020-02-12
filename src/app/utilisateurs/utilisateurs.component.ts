@@ -26,10 +26,9 @@ export class UtilisateursComponent implements OnInit {
           title: 'Utilisateur ajouté avec succès',
           showConfirmButton: false,
           timer: 1500
-        })
+        }).then(function(){
+          window.location.href="/utilisateurs";})
       }
-
     );
-
   }
 }

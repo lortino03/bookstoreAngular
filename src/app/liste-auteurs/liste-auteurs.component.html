@@ -1,14 +1,14 @@
-<html>
+<html style="background-color: coral;">
 
 <head>
 
 </head>
 
-<body>
+<body style="background-color: coral;">
     <h1 align="center">LISTE DES AUTEURS</h1>
-    <div class="container"  id="MonTableau">
+    <div class="container" id="MonTableau">
         <h2>Filtre</h2>
-        <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+        <p>Type something in the input field to search the table for first names, last names or emails:</p>
         <input class="form-control" id="myInput" type="text" placeholder="Search..">
         <br>
         <table class="table table-bordered">
@@ -29,7 +29,7 @@
                             class="btn btn-outline-success">Consulter</a>
                         <a type="button" href="{{'http://localhost:4200/modif-auteurs/'+Auteurs.idAuteurs}}"
                             class="btn btn-outline-primary">Modifier</a>
-                            <a type="button" href="{{'http://localhost:4200/livres-auteur/'+Auteurs.idAuteurs}}"
+                        <a type="button" href="{{'http://localhost:4200/livres-auteur/'+Auteurs.idAuteurs}}"
                             class="btn btn-outline-primary">Afficher</a>
                     </td>
                     <td></td>
@@ -40,3 +40,7 @@
                 </a></button>
         </table>
     </div>
+
+</body>
+
+</html>

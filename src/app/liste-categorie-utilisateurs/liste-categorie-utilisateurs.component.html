@@ -1,12 +1,12 @@
-<html>
+<html style="background-color: coral;">
 
 <head>
 
 </head>
 
-<body style="background-color:rgb(255, 150, 112);">
+<body style="background-color: coral;">
     <h2 align="center">LISTE DES CATEGORIES</h2>
-    <div class="container" id="MonTableau">
+    <div class="container" id="MonTableau" style="background-color: wheat;">
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr align="center">
@@ -19,13 +19,14 @@
                     <td align="center">{{Categorie.libelle}}</td>
                     <td align="center">
                         <a type="button" href="{{'http://localhost:4200/detail-categorie/'+ Categorie.idCategorie}}"
-                            class="btn btn-outline-success">Consulter</a>              
-                            <a type="button" href="{{'http://localhost:4200/livres-categorie/'+Categorie.idCategorie}}"
-                            class="btn btn-outline-primary">Afficher les livres</a></td>
+                            class="btn btn-success">Consulter</a>
+                        <a type="button" href="{{'http://localhost:4200/livres-categorie/'+Categorie.idCategorie}}"
+                            class="btn btn-primary">Afficher les livres</a></td>
                 </tr>
             </tbody>
         </table>
     </div>
 </body>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </html>

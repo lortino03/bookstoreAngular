@@ -29,7 +29,9 @@ export class ConnexionComponent implements OnInit {
     this.newUtilisateur.pwd = this.pwd;
     this.utilisateursService.getByLogin(this.newUtilisateur).subscribe(
       data => {
-        if (data != null) {
+        if (this.newUtilisateur != null) {
+          localStorage.setItem("login",data["login"])
+          localStorage.setItem("pwd",data["pwd"])
           Swal.fire({
             position: 'top-end',
             icon: 'success',

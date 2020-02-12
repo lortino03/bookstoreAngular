@@ -1,14 +1,15 @@
-<html>
+<html style="background-color: coral;">
 
 <head>
 
 </head>
 
-<body style="background-color:rgb(255, 150, 112);">
+<body style="background-color: coral;">
+    <br><br><br>
     <h1 align="center">LISTE DES AUTEURS</h1>
-    <div class="container"  id="MonTableau">
-        <h2>Filtre</h2>
-  <p>Type something in the input field to search the table for first names, last names or emails:</p>  
+    <div class="container"  id="MonTableau" style="background-color:wheat;">
+        <h2 align="center">Filtre</h2>
+  <p align="center">Taper un mot dans la barre de recherche( nom, prenom, titre..)</p>  
   <input class="form-control" id="myInput" type="text" placeholder="Search..">
   <br>
         <table class="table table-bordered">
@@ -25,9 +26,9 @@
                     <td>{{Auteurs.prenom}}</td>
                     <td align="center">
                         <a type="button" href="{{'http://localhost:4200/detail-auteurs/'+Auteurs.idAuteurs}}"
-                            class="btn btn-outline-success">Consulter</a>
+                            class="btn btn-success">Consulter</a>
                             <a type="button" href="{{'http://localhost:4200/livres-auteur/'+Auteurs.idAuteurs}}"
-                            class="btn btn-outline-primary">Afficher les livres</a>
+                            class="btn btn-primary">Afficher les livres</a>
                     </td>
                     <td></td>
                 </tr>

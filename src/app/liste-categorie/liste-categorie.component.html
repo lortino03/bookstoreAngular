@@ -1,10 +1,10 @@
-<html>
+<html style="background-color: coral;">
 
 <head>
 
 </head>
 
-<body style="background-color:rgb(255, 150, 112);">
+<body style="background-color: coral;">
     <h2 align="center">LISTE DES CATEGORIES</h2>
     <div class="container" id="MonTableau">
         <table class="table table-bordered">
@@ -20,7 +20,7 @@
                     <td align="center"><button type="button" class="btn btn-outline-danger"
                             (click)="SupprimerCategorie(Categorie.idCategorie)">Supprimer</button>
                         <a type="button" href="{{'http://localhost:4200/detail-categorie/'+ Categorie.idCategorie}}"
-                            class="btn btn-outline-success">Consulter</a>
+                            class="btn btn-success">Consulter</a>
                         <a type="button" href="{{'http://localhost:4200/modif-categorie/'+Categorie.idCategorie}}"
                             class="btn btn-outline-primary">modifier</a>
                             <a type="button" href="{{'http://localhost:4200/livres-categorie/'+Categorie.idCategorie}}"
