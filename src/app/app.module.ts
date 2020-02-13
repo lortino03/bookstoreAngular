@@ -43,6 +43,7 @@ import{MatSortModule} from '@angular/material/sort';
 import { TestTutoComponent } from './test-tuto/test-tuto.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
+import { ReservationComponent } from './reservation/reservation.component';
 
 
 
@@ -81,7 +82,8 @@ import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
     ListeEtagereUtilisateurComponent,
     TestTutoComponent,
     ConnexionComponent,
-    UtilisateursComponent
+    UtilisateursComponent,
+    ReservationComponent
     
   ],
 

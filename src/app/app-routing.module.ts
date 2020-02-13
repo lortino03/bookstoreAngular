@@ -33,27 +33,32 @@ import { LivreParCategorieComponent } from './livre-par-categorie/livre-par-cate
 import { TestTutoComponent } from './test-tuto/test-tuto.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { UtilisateursComponent } from './utilisateurs/utilisateurs.component';
+import{AuthGuardService} from './services/auth-guard.service'
 
 
 const routes: Routes = [
   {
     path :"livres",
-    component: LivresComponent
+    component: LivresComponent,
+    canActivate: [AuthGuardService]
    
   },
   {
     path :"auteurs",
-    component: AuteursComponent
+    component: AuteursComponent,
+    canActivate: [AuthGuardService]
    
   },
   {
     path :"categorie",
-    component: CategorieComponent
+    component: CategorieComponent,
+    canActivate: [AuthGuardService]
    
   },
  {
    path:"etagere",
-   component:EtagereComponent
+   component:EtagereComponent,
+   canActivate: [AuthGuardService]
  },
  {
    path: "header",
@@ -61,19 +66,23 @@ const routes: Routes = [
  },
  {
    path:"liste-livres",
-   component:ListeLivresComponent
+   component:ListeLivresComponent,
+   canActivate: [AuthGuardService]
  },
  {
    path:"liste-auteurs",
-   component:ListeAuteursComponent
+   component:ListeAuteursComponent,
+   canActivate: [AuthGuardService]
  },
  {
   path:"liste-categorie",
-  component:ListeCategorieComponent
+  component:ListeCategorieComponent,
+  canActivate: [AuthGuardService]
 },
 {
   path:"liste-etagere",
-  component:ListeEtagereComponent
+  component:ListeEtagereComponent,
+  canActivate: [AuthGuardService]
 },
 {
   path:"modif-livres/:idLivre",
@@ -134,37 +143,45 @@ const routes: Routes = [
 ,
 {
   path:"contact",
-  component:ContactComponent
+  component:ContactComponent,
+  canActivate: [AuthGuardService]
 },
 {
   path:"liste-livres-utilisateurs",
-  component:ListeLivresUtilisateursComponent
+  component:ListeLivresUtilisateursComponent,// la virgule et can activate  pour restreindre l'acces a cette route
+  canActivate: [AuthGuardService]
 }
 ,
 {
   path:"liste-auteurs-utilisateurs",
-  component:ListeAuteursUtilisateursComponent
+  component:ListeAuteursUtilisateursComponent,
+  canActivate: [AuthGuardService]
 }
 ,
 {
   path:"liste-categorie-utilisateurs",
-  component:ListeCategorieUtilisateursComponent
+  component:ListeCategorieUtilisateursComponent,
+  canActivate: [AuthGuardService]
 },
 {
   path:"liste-etagere-utilisateur",
-  component:ListeEtagereUtilisateurComponent
+  component:ListeEtagereUtilisateurComponent,
+  canActivate: [AuthGuardService]
 },
 {
   path:"livre-par-auteur",
-  component:LivreParAuteurComponent
+  component:LivreParAuteurComponent,
+  canActivate: [AuthGuardService]
 },
 {
 path: "livre-par-etagere",
-component:LivreParEtagereComponent
+component:LivreParEtagereComponent,
+canActivate: [AuthGuardService]
 },
 {
   path : "livre-par-categorie",
-  component:LivreParCategorieComponent
+  component:LivreParCategorieComponent,
+  canActivate: [AuthGuardService]
 }
 ,
 {

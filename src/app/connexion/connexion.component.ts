@@ -39,9 +39,8 @@ export class ConnexionComponent implements OnInit {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'bievenue sur la page',
-            showConfirmButton: false,
-            showCloseButton:true,
+            title: 'Connexion reussie!',
+          
             timer: 1500
           }).then (function(){
             window.location.href="/home";
@@ -64,17 +63,18 @@ export class ConnexionComponent implements OnInit {
     
     this.utilisateursService.getByLoginToken(this.newUtilisateur).subscribe(
       data => {
+        this.newUtilisateur.login=data;
+        this.newUtilisateur.pwd=data;
         if (data != null) {
           localStorage.setItem("token",data["token"])
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: 'bievenue sur la page',
-            showConfirmButton: false,
-            showCloseButton:true,
+            title: 'Connexion reussie!',
             timer: 1500
           }).then (function(){
             window.location.href="/home";
+            console.log("token")
           })
         }
         else{
@@ -90,12 +90,5 @@ export class ConnexionComponent implements OnInit {
       }
     );
   }
-  getDecodedAccessToken(token: string): any {
-    try{
-        return jwt_decode(localStorage.getItem("token"));
-    }
-    catch(Error){
-        return null;
-    }
-  } 
+
 }
